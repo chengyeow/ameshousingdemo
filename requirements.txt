@@ -1,11 +1,3 @@
-pipe_gridsearch==0.91
-streamlit 
-plotly 
-mlxtend 
-seaborn
-matplotlib
-numpy
-pandas
-sklearn
-pickle
-statsmodels
+numpy==1.19.5
+pandas==1.3.4
+streamlit==1.2.0
