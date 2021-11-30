@@ -1,4 +1,4 @@
-lasso==0.91
+pipe_gridsearch==0.91
 streamlit 
 plotly 
 mlxtend 
