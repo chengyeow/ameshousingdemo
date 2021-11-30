@@ -1,0 +1,11 @@
+lasso==0.91
+streamlit 
+plotly 
+mlxtend 
+seaborn
+matplotlib
+numpy
+pandas
+sklearn
+pickle
+statsmodels
