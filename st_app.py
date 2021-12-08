@@ -28,7 +28,7 @@ page = st.sidebar.selectbox(
 
 if page == 'Home':
     st.subheader('Your one and only property friend.')
-    st.write('A well-established company around your neighborhood for the last 10 years.')
+    st.write('A well-established company around your neighborhood for the last 20 years.')
 
 if page == 'Select Home Features':
     # header
