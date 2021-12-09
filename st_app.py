@@ -4,16 +4,19 @@ import numpy as np
 import pandas as pd
 import pickle
 import streamlit as st
-#from sklearn.linear_model import lasso
+from sklearn.linear_model import lasso
 
+
+from PIL import Image
+image = Image.open('propprata.jpg')
 
 st.set_page_config(
     page_icon='📖',
     initial_sidebar_state='expanded'
 )
 
-st.title('PropPrata')
 
+st.title('PropPrata')
 st.write('Your wish is our command')
 
 page = st.sidebar.selectbox(
@@ -27,8 +30,9 @@ page = st.sidebar.selectbox(
 #     return df
 
 if page == 'Home':
+    st.image(image, caption='PropPrata Team')
     st.subheader('Your one and only property friend.')
-    st.write('A well-established company around your neighborhood for the last 10 years.')
+    st.write('A well-established AMES company around your neighborhood for the last 10 years.')
 
 if page == 'Select Home Features':
     # header
@@ -108,7 +112,7 @@ if page == 'Select Home Features':
 
     st.subheader('Estimating your house price')
 
-    with open('./model/model_ames_cy.p', 'rb') as pickle_in:
+    with open('./model/model_ames_cy1.p', 'rb') as pickle_in:
         model = pickle.load(pickle_in)
 
     predicted_price = model.predict(data)[0]
