@@ -110,15 +110,15 @@ if page == 'Select Home Features':
                      all_baths, gr_liv_area]).reshape(1, -1)
     
 
-    st.subheader('Estimating your house price')
+    st.subheader('Estimating your house price:')
 
     with open('./model/model_ames_cy1.p', 'rb') as pickle_in:
         model = pickle.load(pickle_in)
 
     predicted_price = model.predict(data)[0]
-
-    st.subheader('Results:')
-    st.write(f'Your home is worth {round(predicted_price, 2)}. Congratulations!')
+    st.subheader(f'Your home is worth {round(predicted_price, 2)}. Congratulations!')
+#    st.subheader('Results:')
+#    st.write(f'Your home is worth {round(predicted_price, 2)}. Congratulations!')
     
     
     
