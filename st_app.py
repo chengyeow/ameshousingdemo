@@ -8,7 +8,7 @@ import streamlit as st
 
 
 from PIL import Image
-image = Image.open('propprata.jpg')
+image = Image.open('proprata.jpg')
 
 st.set_page_config(
     page_icon='📖',
@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 
-st.title('PropPrata')
+st.title('ProPrata')
 st.write('Your wish is our command')
 
 page = st.sidebar.selectbox(
@@ -30,7 +30,7 @@ page = st.sidebar.selectbox(
 #     return df
 
 if page == 'Home':
-    st.image(image, caption='PropPrata Team')
+    st.image(image, caption='ProPrata Team')
     st.subheader('Your one and only property friend.')
     st.write('A well-established AMES company around your neighborhood for the last 10 years.')
 
