@@ -113,9 +113,12 @@ if page == 'Select Home Features':
 
     st.subheader('Estimating your house price:')
 
-    with open('./model/model_ames_cy1.p', 'rb') as pickle_in:
-        model = pickle.load(pickle_in)
+#     with open('./model/model_ames_cy1.p', 'rb') as pickle_in:
+#         model = pickle.load(pickle_in)
 
+    pickle_in = open('./model/model_ames_cy1.p', 'rb')
+    model = pickle.load(pickle_in)
+        
     predicted_price = model.predict(data)[0]
     st.subheader(f'Your home is worth {round(predicted_price, 2)}. Congratulations!')
 #    st.subheader('Results:')
