@@ -120,7 +120,7 @@ if page == 'Select Home Features':
     pickle_in = open('./model/model_ames_cylasso.p', 'rb')
     model = pickle.load(pickle_in)
         
-    predicted_price = model.predict(data)[0]
+    predicted_price = model.predict(data)[0] / 1000
     st.subheader(f'Your home is worth {round(predicted_price, 2)}. Congratulations!')
 #    st.subheader('Results:')
 #    st.write(f'Your home is worth {round(predicted_price, 2)}. Congratulations!')
