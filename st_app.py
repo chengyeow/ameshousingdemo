@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import pickle
 import streamlit as st
-# import sklearn
+import sklearn
 # from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import lasso
 
@@ -117,7 +117,7 @@ if page == 'Select Home Features':
 #     with open('./model/model_ames_cy1.p', 'rb') as pickle_in:
 #         model = pickle.load(pickle_in)
 
-    pickle_in = open('./model/model_ames_cylr.p', 'rb')
+    pickle_in = open('./model/model_ames_cylasso.p', 'rb')
     model = pickle.load(pickle_in)
         
     predicted_price = model.predict(data)[0]
