@@ -112,7 +112,7 @@ if page == 'Select Home Features':
 
     st.subheader('Estimating your house price:')
 
-    with open('./model/finalised_model_cy1.p', 'rb') as pickle_in:
+    with open('./model/model_ames_cy1.p', 'rb') as pickle_in:
         model = pickle.load(pickle_in)
 
     predicted_price = model.predict(data)[0]
