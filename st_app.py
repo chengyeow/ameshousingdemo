@@ -4,9 +4,9 @@ import numpy as np
 import pandas as pd
 import pickle
 import streamlit as st
-import sklearn
+# import sklearn
 # from sklearn.linear_model import LinearRegression
-from sklearn.linear_model import lasso
+from sklearn.linear_model import Lasso
 
 
 from PIL import Image
